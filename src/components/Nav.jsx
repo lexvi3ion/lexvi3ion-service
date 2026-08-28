@@ -1,3 +1,5 @@
+import ThemeToggle from './ThemeToggle.jsx'
+
 export default function Nav() {
   return (
     <header className="nav">
@@ -15,6 +17,7 @@ export default function Nav() {
           <a href="#marketing">Marketing</a>
         </nav>
         <div className="nav-cta">
+          <ThemeToggle />
           <a className="btn btn--primary" href="#contact">Prendre contact</a>
         </div>
       </div>
