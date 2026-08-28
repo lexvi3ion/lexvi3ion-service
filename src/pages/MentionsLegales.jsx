@@ -5,10 +5,10 @@ export default function MentionsLegales() {
     <LegalPageLayout title="Mentions légales" updated="28 août 2026">
       <h2>Éditeur du site</h2>
       <p>
-        Le site LEX VI3ION est édité par Mendrika Jérémie Ratsivalaka
-        Andriamanantsoa, entrepreneur individuel, immatriculé sous le numéro
-        SIRET 107 650 970 00018, dont le siège est situé 99 avenue Achille
-        Peretti, 92200 Neuilly-sur-Seine.
+        Le site LEX VI3ION est édité par Mendrika Ratsivalaka, entrepreneur
+        individuel, immatriculé sous le numéro SIRET 107 650 970 00018, dont
+        le siège est situé 99 avenue Achille Peretti, 92200
+        Neuilly-sur-Seine.
       </p>
       <p>
         Activité principale : conseil pour les affaires et autres conseils de
@@ -19,8 +19,7 @@ export default function MentionsLegales() {
         général des impôts).
       </p>
       <p>
-        Directeur de la publication : Mendrika Jérémie Ratsivalaka
-        Andriamanantsoa.
+        Directeur de la publication : Mendrika Ratsivalaka.
       </p>
       <p>
         Contact : <a href="mailto:contact.lexvi3ion@gmail.com">contact.lexvi3ion@gmail.com</a> — 06 25 24 44 30.
