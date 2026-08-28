@@ -2,13 +2,7 @@ import LegalPageLayout from './LegalPageLayout.jsx'
 
 export default function Confidentialite() {
   return (
-    <LegalPageLayout title="Politique de confidentialité" updated="à compléter">
-      <p className="legal-flag">
-        ⚠️ Page à finaliser : à adapter selon les outils réellement utilisés
-        (formulaire, analytics, hébergement des données clients) avant mise
-        en ligne publique — obligations RGPD.
-      </p>
-
+    <LegalPageLayout title="Politique de confidentialité">
       <h2>Données collectées</h2>
       <p>
         Le formulaire de contact de ce site permet de composer un e-mail

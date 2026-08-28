@@ -2,25 +2,25 @@ import LegalPageLayout from './LegalPageLayout.jsx'
 
 export default function MentionsLegales() {
   return (
-    <LegalPageLayout title="Mentions légales" updated="à compléter">
-      <p className="legal-flag">
-        ⚠️ Page à finaliser : remplacez les informations entre crochets par les
-        coordonnées légales exactes de l'entreprise avant la mise en ligne
-        publique (obligation légale en France, article 6-III de la loi n°2004-575).
-      </p>
-
+    <LegalPageLayout title="Mentions légales" updated="28 août 2026">
       <h2>Éditeur du site</h2>
       <p>
-        Le site LEX VI3ION est édité par [Nom et prénom / raison sociale],
-        [statut juridique — ex. entreprise individuelle, EURL, SASU],
-        immatriculé(e) sous le numéro SIRET [numéro SIRET],
-        dont le siège est situé [adresse complète].
+        Le site LEX VI3ION est édité par Mendrika Jérémie Ratsivalaka
+        Andriamanantsoa, entrepreneur individuel, immatriculé sous le numéro
+        SIRET 107 650 970 00018, dont le siège est situé 99 avenue Achille
+        Peretti, 92200 Neuilly-sur-Seine.
       </p>
       <p>
-        Numéro de TVA intracommunautaire (le cas échéant) : [numéro de TVA].
+        Activité principale : conseil pour les affaires et autres conseils de
+        gestion (code APE 7022Z).
       </p>
       <p>
-        Directeur de la publication : [Nom et prénom].
+        TVA non applicable — franchise en base de TVA (article 293 B du Code
+        général des impôts).
+      </p>
+      <p>
+        Directeur de la publication : Mendrika Jérémie Ratsivalaka
+        Andriamanantsoa.
       </p>
       <p>
         Contact : <a href="mailto:contact.lexvi3ion@gmail.com">contact.lexvi3ion@gmail.com</a> — 06 25 24 44 30.
