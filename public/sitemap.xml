@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lexi3ion-service.vercel.app/</loc>
+    <loc>https://lexvi3ion.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lexi3ion-service.vercel.app/mentions-legales</loc>
+    <loc>https://lexvi3ion.vercel.app/mentions-legales</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://lexi3ion-service.vercel.app/confidentialite</loc>
+    <loc>https://lexvi3ion.vercel.app/confidentialite</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

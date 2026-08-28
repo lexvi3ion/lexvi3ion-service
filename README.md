@@ -21,7 +21,7 @@ largement :
   vide, le bouton "Réserver un appel" ouvre le formulaire de contact à la
   place, donc rien n'est cassé en attendant.
 - **`index.html`, `public/robots.txt`, `public/sitemap.xml`** — remplacer
-  `lexi3ion-service.vercel.app` par le vrai domaine une fois le déploiement
+  `lexvi3ion.vercel.app` par le vrai domaine une fois le déploiement
   confirmé (ou le nom de domaine personnalisé si vous en ajoutez un).
 
 ## Formulaire de contact
