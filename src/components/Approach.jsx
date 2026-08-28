@@ -6,7 +6,9 @@ export default function Approach() {
       <div className="wrap">
         <div className="approach-grid">
           <Reveal>
-            <img src="/logo.png" alt="Logo LEX VI3ION" className="approach-mark-img" />
+            <div className="approach-mark-wrap">
+              <img src="/logo.png" alt="Logo LEX VI3ION" className="approach-mark-img" />
+            </div>
           </Reveal>
 
           <Reveal delay={120}>

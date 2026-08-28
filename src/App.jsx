@@ -8,10 +8,12 @@ import Legal from './components/Legal.jsx'
 import Marketing from './components/Marketing.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import { ContactModalProvider } from './components/ContactModalContext.jsx'
+import ContactModal from './components/ContactModal.jsx'
 
 export default function App() {
   return (
-    <>
+    <ContactModalProvider>
       <Nav />
       <main>
         <Hero />
@@ -24,6 +26,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+      <ContactModal />
+    </ContactModalProvider>
   )
 }

@@ -1,6 +1,8 @@
 import ThemeToggle from './ThemeToggle.jsx'
+import { useContactModal } from './ContactModalContext.jsx'
 
 export default function Nav() {
+  const { openModal } = useContactModal()
   return (
     <header className="nav">
       <div className="wrap">
@@ -21,7 +23,7 @@ export default function Nav() {
         </nav>
         <div className="nav-cta">
           <ThemeToggle />
-          <a className="btn btn--primary" href="#contact">Prendre contact</a>
+          <button type="button" className="btn btn--primary" onClick={openModal}>Prendre contact</button>
         </div>
       </div>
     </header>

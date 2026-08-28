@@ -69,22 +69,22 @@ export default function Finance() {
             <div className="ledger">
               <div className="ledger-row">
                 <span>Objectif CA</span>
-                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ width: '78%' }} /></div>
+                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ '--fill': '78%' }} /></div>
                 <span>78%</span>
               </div>
               <div className="ledger-row">
                 <span>Marge nette</span>
-                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ width: '64%' }} /></div>
+                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ '--fill': '64%' }} /></div>
                 <span>64%</span>
               </div>
               <div className="ledger-row">
                 <span>Charges fixes</span>
-                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ width: '41%' }} /></div>
+                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ '--fill': '41%' }} /></div>
                 <span>41%</span>
               </div>
               <div className="ledger-row">
                 <span>Trésorerie dispo.</span>
-                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ width: '92%' }} /></div>
+                <div className="ledger-bar-track"><div className="ledger-bar-fill" style={{ '--fill': '92%' }} /></div>
                 <span>92%</span>
               </div>
             </div>

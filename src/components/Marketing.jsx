@@ -15,9 +15,9 @@ export default function Marketing() {
           <Reveal className="pole-visual visual-marketing">
             <div className="content-grid">
               <div className="content-tile"><span></span></div>
-              <div className="content-tile hot"><span></span></div>
               <div className="content-tile"><span></span></div>
-              <div className="content-tile hot2"><span></span></div>
+              <div className="content-tile"><span></span></div>
+              <div className="content-tile"><span></span></div>
               <div className="content-tile"><span></span></div>
               <div className="content-tile"><span></span></div>
             </div>

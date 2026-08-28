@@ -1,7 +1,9 @@
 import Cockpit from './Cockpit.jsx'
 import Ticker from './Ticker.jsx'
+import { useContactModal } from './ContactModalContext.jsx'
 
 export default function Hero() {
+  const { openModal } = useContactModal()
   return (
     <section className="hero" id="top">
       <div className="blob blob--navy"></div>
@@ -24,7 +26,7 @@ export default function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a className="btn btn--primary" href="#contact">Parlons de votre activité</a>
+          <button type="button" className="btn btn--primary" onClick={openModal}>Parlons de votre activité</button>
           <a className="btn btn--ghost" href="tel:0625244430">06 25 24 44 30</a>
         </div>
       </div>
