@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useContactModal } from './ContactModalContext.jsx'
+import { useCalendly } from './useCalendly.js'
 
 const SUBJECTS = [
   'Direction financière',
@@ -13,6 +14,7 @@ const EMPTY = { name: '', email: '', subject: SUBJECTS[0], message: '' }
 
 export default function ContactModal() {
   const { open, closeModal } = useContactModal()
+  const { openCalendly, isConfigured } = useCalendly()
   const [form, setForm] = useState(EMPTY)
   const [status, setStatus] = useState('idle') // idle | sending | sent
   const firstFieldRef = useRef(null)
@@ -106,6 +108,12 @@ export default function ContactModal() {
             <span className="eyebrow">Nous contacter</span>
             <h3 id="contact-modal-title">Envoyer un message</h3>
             <p className="modal-sub">Remplissez le formulaire, votre messagerie s'ouvrira avec le message déjà prêt à partir.</p>
+
+            {isConfigured && (
+              <button type="button" className="modal-calendly" onClick={openCalendly}>
+                📅 Ou réservez directement un appel de 20 minutes
+              </button>
+            )}
 
             <form onSubmit={handleSubmit} className="modal-form">
               <div className="field-row">

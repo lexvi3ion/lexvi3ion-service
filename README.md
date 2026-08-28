@@ -4,6 +4,33 @@ Site vitrine one-page pour LEX VI3ION, copilote administratif, financier et
 juridique pour auto-entrepreneurs, TPE et PME. Construit avec React + Vite,
 sans dépendance externe lourde (CSS pur, pas de Tailwind).
 
+## À compléter avant la mise en ligne publique
+
+Ces éléments ont été ajoutés avec des valeurs par défaut ou des
+placeholders clairement signalés — à finaliser avant de partager le site
+largement :
+
+- **`src/pages/MentionsLegales.jsx`** — remplacer les `[crochets]` par les
+  vraies informations légales (nom/raison sociale, statut juridique, SIRET,
+  adresse). Obligatoire légalement en France dès qu'il y a un formulaire de
+  contact.
+- **`src/pages/Confidentialite.jsx`** — à relire/adapter si un outil
+  d'analytics est ajouté plus tard.
+- **`src/config.js`** — ajouter le vrai lien Calendly dans `CALENDLY_URL`
+  une fois le compte créé (gratuit sur calendly.com). Tant que ce champ est
+  vide, le bouton "Réserver un appel" ouvre le formulaire de contact à la
+  place, donc rien n'est cassé en attendant.
+- **`index.html`, `public/robots.txt`, `public/sitemap.xml`** — remplacer
+  `lexi3ion-service.vercel.app` par le vrai domaine une fois le déploiement
+  confirmé (ou le nom de domaine personnalisé si vous en ajoutez un).
+
+## Formulaire de contact
+
+Le modal "Prendre contact" compose un e-mail pré-rempli et ouvre la
+messagerie du visiteur (`mailto:`) — aucun serveur requis, fonctionne
+partout. Pour un envoi silencieux depuis le site (sans ouvrir la
+messagerie), il faudrait brancher un service comme Formspree ou EmailJS.
+
 ## Lancer le projet en local
 
 ```bash

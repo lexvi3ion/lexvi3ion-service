@@ -1,29 +1,33 @@
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Nav from './components/Nav.jsx'
-import Hero from './components/Hero.jsx'
-import Approach from './components/Approach.jsx'
-import Domains from './components/Domains.jsx'
-import Finance from './components/Finance.jsx'
-import Admin from './components/Admin.jsx'
-import Legal from './components/Legal.jsx'
-import Marketing from './components/Marketing.jsx'
-import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import { ContactModalProvider } from './components/ContactModalContext.jsx'
 import ContactModal from './components/ContactModal.jsx'
+import Home from './pages/Home.jsx'
+import MentionsLegales from './pages/MentionsLegales.jsx'
+import Confidentialite from './pages/Confidentialite.jsx'
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) return
+    window.scrollTo({ top: 0 })
+  }, [pathname, hash])
+  return null
+}
 
 export default function App() {
   return (
     <ContactModalProvider>
+      <ScrollToTop />
       <Nav />
       <main>
-        <Hero />
-        <Approach />
-        <Domains />
-        <Finance />
-        <Admin />
-        <Legal />
-        <Marketing />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/confidentialite" element={<Confidentialite />} />
+        </Routes>
       </main>
       <Footer />
       <ContactModal />
