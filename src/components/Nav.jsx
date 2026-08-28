@@ -5,6 +5,7 @@ import { useContactModal } from './ContactModalContext.jsx'
 const LINKS = [
   { href: '/#approche', label: "L'approche" },
   { href: '/#domaines', label: 'Expertises' },
+  { href: '/#simulateurs', label: 'Simulateurs' },
   { href: '/#process', label: 'Comment ça marche' },
   { href: '/#finance', label: 'Finance' },
   { href: '/#administratif', label: 'Administratif' },

@@ -1557,6 +1557,326 @@ img, svg{ display: block; max-width: 100%; }
 .legal-body p{ margin-top: 12px; color: var(--ink-soft); font-size: 15px; line-height: 1.7; }
 .legal-body a{ color: var(--red-600); text-decoration: underline; text-underline-offset: 3px; }
 
+/* ============================================================
+   Simulateurs interactifs
+   ============================================================ */
+.simulators{ border-top: 1px solid var(--line); }
+
+.sim-shell{
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.sim-tabs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 10px;
+  background: var(--paper-dim);
+  border-bottom: 1.5px solid var(--line-strong);
+}
+
+.sim-tab{
+  flex: 1 1 auto;
+  min-width: 150px;
+  padding: 13px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sim-tab:hover{ color: var(--ink); }
+
+.sim-tab.is-active{
+  background: var(--navy-950);
+  color: #fff;
+}
+
+.sim-body{ padding: 36px; }
+
+.sim-panel{ display: flex; flex-direction: column; gap: 26px; }
+
+.sim-inputs{ display: flex; flex-direction: column; gap: 22px; }
+
+.sim-inputs--grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 28px;
+}
+
+.sim-field{ display: flex; flex-direction: column; gap: 10px; }
+
+.sim-field-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.sim-value{
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sim-field input[type='range']{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background: var(--line-strong);
+  outline-offset: 6px;
+}
+
+.sim-field input[type='range']::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--red-600);
+  border: 3px solid var(--surface);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.sim-field input[type='range']::-moz-range-thumb{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--red-600);
+  border: 3px solid var(--surface);
+  cursor: pointer;
+}
+
+.sim-results--hero{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--navy-950);
+}
+
+.sim-result-main, .sim-result-side{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sim-result-side{
+  border-left: 1px solid rgba(255,255,255,0.14);
+  padding-left: 16px;
+  justify-content: center;
+}
+
+.sim-result-label{
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+.sim-result-big{
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.sim-result-mid{
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sim-result-note{
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.sim-cta{ align-self: flex-start; }
+
+/* cashflow chart */
+.sim-chart{
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  padding: 16px 8px 4px;
+  background: var(--paper-dim);
+}
+
+.sim-chart-svg{ width: 100%; height: auto; display: block; }
+
+.sim-chart-label{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  fill: var(--ink-faint);
+}
+
+.sim-alert{
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sim-alert--warning{
+  background: var(--red-050);
+  color: var(--red-700);
+  border: 1.5px solid var(--red-600);
+}
+[data-theme='dark'] .sim-alert--warning{ background: rgba(238,27,46,0.1); color: #ff8a94; }
+
+.sim-alert--ok{
+  background: rgba(34, 160, 90, 0.1);
+  color: #1f8a52;
+  border: 1.5px solid rgba(34, 160, 90, 0.4);
+}
+[data-theme='dark'] .sim-alert--ok{ color: #4ad189; }
+
+/* gauge card (profitability + legal quiz) */
+.sim-gauge-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 26px;
+  border-radius: var(--radius-md);
+  background: var(--paper-dim);
+  border: 1.5px solid var(--line-strong);
+}
+
+.sim-gauge-card > div{ display: flex; flex-direction: column; gap: 4px; }
+.sim-gauge-card .sim-result-label{ color: var(--ink-faint); }
+.sim-gauge-card .sim-result-big{ color: var(--ink); }
+.sim-gauge-card .sim-result-note{ color: var(--ink-soft); }
+
+.sim-status-pill{
+  flex: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sim-gauge-card--ok .sim-status-pill{ background: rgba(34,160,90,0.14); color: #1f8a52; }
+.sim-gauge-card--warn .sim-status-pill{ background: rgba(238,150,27,0.16); color: #c07000; }
+.sim-gauge-card--bad .sim-status-pill{ background: rgba(238,27,46,0.12); color: var(--red-700); }
+[data-theme='dark'] .sim-gauge-card--ok .sim-status-pill{ color: #4ad189; }
+[data-theme='dark'] .sim-gauge-card--warn .sim-status-pill{ color: #ffb95c; }
+[data-theme='dark'] .sim-gauge-card--bad .sim-status-pill{ color: #ff8a94; }
+
+.sim-gauge-track{
+  position: relative;
+  height: 10px;
+  border-radius: 6px;
+  background: var(--line-strong);
+  overflow: visible;
+}
+
+.sim-gauge-fill{
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--red-600), var(--coral));
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sim-gauge-threshold{
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 18px;
+  background: var(--ink);
+  opacity: 0.5;
+}
+
+.sim-gauge-caption{
+  margin-top: -12px;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+}
+
+/* legal quiz */
+.sim-quiz-list{ display: flex; flex-direction: column; gap: 4px; }
+
+.sim-quiz-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.sim-quiz-item p{ font-size: 14.5px; color: var(--ink); }
+
+.sim-quiz-toggle{ display: flex; gap: 8px; flex: none; }
+
+.sim-quiz-toggle button{
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 600;
+  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+.sim-quiz-toggle button.is-yes{ background: rgba(34,160,90,0.14); border-color: rgba(34,160,90,0.5); color: #1f8a52; }
+.sim-quiz-toggle button.is-no{ background: rgba(238,27,46,0.12); border-color: var(--red-600); color: var(--red-700); }
+[data-theme='dark'] .sim-quiz-toggle button.is-yes{ color: #4ad189; }
+[data-theme='dark'] .sim-quiz-toggle button.is-no{ color: #ff8a94; }
+
+.sim-quiz-progress{ font-size: 14px; color: var(--ink-faint); }
+
+.sim-recos{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sim-recos li{
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.sim-recos li::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red-600);
+}
+
+@media (max-width: 720px){
+  .sim-body{ padding: 24px 20px; }
+  .sim-inputs--grid{ grid-template-columns: 1fr; }
+  .sim-results--hero{ grid-template-columns: 1fr; }
+  .sim-result-side{ border-left: none; border-top: 1px solid rgba(255,255,255,0.14); padding-left: 0; padding-top: 14px; }
+  .sim-tab{ min-width: 130px; font-size: 13px; padding: 11px 12px; }
+}
+
 @media (prefers-reduced-motion: reduce){
   .reveal{ opacity: 1; transform: none; }
   .blob, .hero-badge, .hero h1, .hero-sub, .hero-actions, .ticker, .cockpit-wrap,

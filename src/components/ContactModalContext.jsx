@@ -4,9 +4,15 @@ const ContactModalContext = createContext(null)
 
 export function ContactModalProvider({ children }) {
   const [open, setOpen] = useState(false)
+  const [prefill, setPrefill] = useState(null)
+
   const value = {
     open,
-    openModal: () => setOpen(true),
+    prefill,
+    openModal: (payload) => {
+      setPrefill(payload || null)
+      setOpen(true)
+    },
     closeModal: () => setOpen(false),
   }
   return (

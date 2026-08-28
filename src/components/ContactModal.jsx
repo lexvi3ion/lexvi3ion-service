@@ -13,7 +13,7 @@ const SUBJECTS = [
 const EMPTY = { name: '', email: '', subject: SUBJECTS[0], message: '' }
 
 export default function ContactModal() {
-  const { open, closeModal } = useContactModal()
+  const { open, closeModal, prefill } = useContactModal()
   const { openCalendly, isConfigured } = useCalendly()
   const [form, setForm] = useState(EMPTY)
   const [status, setStatus] = useState('idle') // idle | sending | sent
@@ -38,9 +38,13 @@ export default function ContactModal() {
   useEffect(() => {
     if (open) {
       setStatus('idle')
-      setForm(EMPTY)
+      setForm({
+        ...EMPTY,
+        subject: prefill?.subject && SUBJECTS.includes(prefill.subject) ? prefill.subject : EMPTY.subject,
+        message: prefill?.message || '',
+      })
     }
-  }, [open])
+  }, [open, prefill])
 
   if (!open) return null
 

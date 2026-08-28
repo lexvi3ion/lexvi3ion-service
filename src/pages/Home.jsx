@@ -1,6 +1,7 @@
 import Hero from '../components/Hero.jsx'
 import Approach from '../components/Approach.jsx'
 import Domains from '../components/Domains.jsx'
+import Simulators from '../components/Simulators.jsx'
 import Process from '../components/Process.jsx'
 import Finance from '../components/Finance.jsx'
 import Admin from '../components/Admin.jsx'
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Approach />
       <Domains />
+      <Simulators />
       <Process />
       <Finance />
       <Admin />
