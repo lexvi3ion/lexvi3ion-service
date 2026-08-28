@@ -1,4 +1,5 @@
 import { CheckIcon } from './icons.jsx'
+import Reveal from './Reveal.jsx'
 
 const ITEMS = [
   { label: 'Gestion commerciale complète', text: 'Devis, facturation et suivi rigoureux du recouvrement amiable.' },
@@ -12,7 +13,7 @@ export default function Admin() {
     <section className="section pole" id="administratif">
       <div className="wrap">
         <div className="pole-grid reverse">
-          <div className="pole-visual visual-admin">
+          <Reveal className="pole-visual visual-admin">
             <div className="folder-stack">
               <div className="folder folder--1"><div className="folder-tab"></div></div>
               <div className="folder folder--2"><div className="folder-tab"></div></div>
@@ -22,9 +23,9 @@ export default function Admin() {
                 <div className="folder-line" style={{ top: 52, width: '60%', background: 'rgba(255,255,255,0.16)' }}></div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="pole-body">
+          <Reveal delay={120} className="pole-body">
             <span className="eyebrow">Pôle Administratif</span>
             <h2>Un quotidien <span className="accent">allégé</span></h2>
             <p className="pole-intro">Déléguez les tâches chronophages pour gagner en efficacité, du premier devis jusqu'au dernier document classé.</p>
@@ -36,7 +37,7 @@ export default function Admin() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

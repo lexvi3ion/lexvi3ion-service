@@ -1,4 +1,5 @@
 import Cockpit from './Cockpit.jsx'
+import Ticker from './Ticker.jsx'
 
 export default function Hero() {
   return (
@@ -27,6 +28,8 @@ export default function Hero() {
           <a className="btn btn--ghost" href="tel:0625244430">06 25 24 44 30</a>
         </div>
       </div>
+
+      <Ticker />
 
       <div className="wrap">
         <div className="cockpit-wrap">

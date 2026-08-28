@@ -1,3 +1,5 @@
+import Reveal from './Reveal.jsx'
+
 const DOMAINS = [
   {
     idx: 'Finance',
@@ -25,20 +27,22 @@ export default function Domains() {
   return (
     <section className="section" id="domaines">
       <div className="wrap">
-        <div className="section-head">
+        <Reveal className="section-head">
           <span className="eyebrow">Nos domaines d'expertise</span>
           <h2>Quatre casquettes, <span className="accent">un seul interlocuteur</span></h2>
           <p>De la comptabilité à la visibilité en ligne, chaque pôle est pensé pour se répondre — vos chiffres, vos papiers et votre image avancent ensemble.</p>
-        </div>
+        </Reveal>
 
         <div className="domains-grid">
-          {DOMAINS.map((d) => (
-            <div className="domain-card" key={d.title}>
-              <span className="domain-dot"></span>
-              <span className="domain-index">{d.idx}</span>
-              <h3>{d.title}</h3>
-              <p>{d.desc}</p>
-            </div>
+          {DOMAINS.map((d, i) => (
+            <Reveal delay={i * 90} key={d.title}>
+              <div className="domain-card">
+                <span className="domain-dot"></span>
+                <span className="domain-index">{d.idx}</span>
+                <h3>{d.title}</h3>
+                <p>{d.desc}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

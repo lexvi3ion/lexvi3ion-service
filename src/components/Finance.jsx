@@ -1,4 +1,5 @@
 import { CheckIcon, IconMagnifier, IconGauge, IconScale } from './icons.jsx'
+import Reveal from './Reveal.jsx'
 
 const MINI = [
   {
@@ -29,26 +30,28 @@ export default function Finance() {
   return (
     <section className="section pole" id="finance">
       <div className="wrap">
-        <div className="section-head">
+        <Reveal className="section-head">
           <span className="eyebrow">Pôle Finance</span>
           <h2>Diagnostic <span className="accent">&amp; trésorerie</span></h2>
           <p>Garder le cap nécessite des outils de pilotage précis, de l'audit initial jusqu'au suivi mensuel de vos liquidités.</p>
-        </div>
+        </Reveal>
 
         <div className="mini-cards">
-          {MINI.map((m) => (
-            <div className="mini-card" key={m.title}>
-              <div className="mini-icon">{m.icon}</div>
-              <h3>{m.title}</h3>
-              <p>{m.desc}</p>
-            </div>
+          {MINI.map((m, i) => (
+            <Reveal delay={i * 100} key={m.title}>
+              <div className="mini-card">
+                <div className="mini-icon">{m.icon}</div>
+                <h3>{m.title}</h3>
+                <p>{m.desc}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
 
       <div className="wrap" style={{ marginTop: 96 }}>
         <div className="pole-grid">
-          <div className="pole-body">
+          <Reveal className="pole-body">
             <span className="eyebrow">Contrôle de gestion</span>
             <h2>Des chiffres qui <span className="mark-3">éclairent</span> chaque décision</h2>
             <p className="pole-intro">Nous mettons en place des processus rigoureux pour piloter votre activité au plus près du réel.</p>
@@ -60,9 +63,9 @@ export default function Finance() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="pole-visual visual-finance">
+          <Reveal delay={120} className="pole-visual visual-finance">
             <div className="ledger">
               <div className="ledger-row">
                 <span>Objectif CA</span>
@@ -85,7 +88,7 @@ export default function Finance() {
                 <span>92%</span>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

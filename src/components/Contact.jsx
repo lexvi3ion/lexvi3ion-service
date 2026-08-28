@@ -1,8 +1,10 @@
+import Reveal from './Reveal.jsx'
+
 export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="wrap">
-        <div className="contact-card">
+        <Reveal className="contact-card">
           <div className="blob blob--navy"></div>
           <div className="blob blob--red"></div>
           <div className="contact-inner">
@@ -17,7 +19,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

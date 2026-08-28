@@ -5,8 +5,11 @@ export default function Nav() {
     <header className="nav">
       <div className="wrap">
         <a href="#top" className="nav-logo">
-          <span className="lex">LEX</span>
-          <span className="vision">VI3ION</span>
+          <img src="/logo.png" alt="" className="nav-logo-img" />
+          <span className="nav-logo-text">
+            <span className="lex">LEX</span>
+            <span className="vision">VI3ION</span>
+          </span>
         </a>
         <nav className="nav-links">
           <a href="#approche">L'approche</a>

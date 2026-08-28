@@ -200,7 +200,22 @@ img, svg{ display: block; max-width: 100%; }
   letter-spacing: -0.01em;
   display: flex;
   align-items: center;
+  gap: 11px;
+  text-decoration: none;
 }
+
+.nav-logo-img{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-logo:hover .nav-logo-img{
+  transform: rotate(-10deg) scale(1.06);
+}
+
+.nav-logo-text{ display: inline-flex; }
 
 .nav-logo .lex{ color: var(--ink); margin-right: 8px; }
 .nav-logo .vision{ color: var(--red-600); }
@@ -487,40 +502,16 @@ img, svg{ display: block; max-width: 100%; }
   align-items: center;
 }
 
-.approach-mark{
+.approach-mark-img{
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: linear-gradient(160deg, var(--navy-700), var(--navy-900));
-  border: 1px solid rgba(255,255,255,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.45));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.approach-mark .lex{
-  font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.05;
-}
-
-.approach-mark .vi3ion{
-  font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.05;
-}
-
-.approach-mark .three{
-  text-decoration: underline;
-  text-decoration-color: var(--red-600);
-  text-decoration-thickness: 4px;
-  text-underline-offset: 5px;
+.approach-mark-img:hover{
+  transform: scale(1.035) rotate(-2deg);
 }
 
 .approach-copy p{
@@ -535,8 +526,7 @@ img, svg{ display: block; max-width: 100%; }
 
 @media (max-width: 820px){
   .approach-grid{ grid-template-columns: 1fr; gap: 40px; }
-  .approach-mark{ width: 220px; height: 220px; margin: 0 auto; }
-  .approach-mark .lex, .approach-mark .vi3ion{ font-size: 26px; }
+  .approach-mark-img{ width: 220px; height: 220px; margin: 0 auto; }
 }
 
 /* ============================================================
@@ -950,8 +940,98 @@ img, svg{ display: block; max-width: 100%; }
 }
 
 /* ============================================================
-   Reduced motion
+   Motion — reveal on scroll, drifting blobs, hero entrance
    ============================================================ */
+.reveal{
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes blobDrift{
+  0%{ transform: translate(0, 0) rotate(0deg); }
+  50%{ transform: translate(16px, -14px) rotate(6deg); }
+  100%{ transform: translate(0, 0) rotate(0deg); }
+}
+
+.blob{ animation: blobDrift 15s ease-in-out infinite; }
+.blob--red{ animation-duration: 18s; animation-delay: -4s; }
+.blob--blush{ animation-duration: 21s; animation-delay: -8s; }
+
+@keyframes fadeUp{
+  from{ opacity: 0; transform: translateY(20px); }
+  to{ opacity: 1; transform: none; }
+}
+
+.hero-badge{ animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hero h1{ animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both; }
+.hero-sub{ animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s both; }
+.hero-actions{ animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both; }
+.ticker{ animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both; }
+.cockpit-wrap{ animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+
+.ticker{
+  margin-top: 40px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.ticker-track{
+  display: flex;
+  width: max-content;
+  gap: 36px;
+  animation: tickerScroll 26s linear infinite;
+}
+
+@keyframes tickerScroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+.ticker-item{
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ticker-item::after{
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--red-600);
+}
+
+@keyframes pulseDot{
+  0%, 100%{ transform: scale(1); opacity: 1; }
+  50%{ transform: scale(1.5); opacity: 0.5; }
+}
+
+.domain-dot{ animation: pulseDot 2.6s ease-in-out infinite; }
+.domain-card:nth-child(2) .domain-dot{ animation-delay: 0.4s; }
+.domain-card:nth-child(3) .domain-dot{ animation-delay: 0.8s; }
+.domain-card:nth-child(4) .domain-dot{ animation-delay: 1.2s; }
+
+.mini-icon{ transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+.mini-card:hover .mini-icon{ transform: rotate(-8deg) scale(1.08); }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity: 1; transform: none; }
+  .blob, .hero-badge, .hero h1, .hero-sub, .hero-actions, .ticker, .cockpit-wrap,
+  .ticker-track, .domain-dot{ animation: none !important; }
+}
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *{ transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }

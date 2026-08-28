@@ -1,4 +1,5 @@
 import { CheckIcon } from './icons.jsx'
+import Reveal from './Reveal.jsx'
 
 const ITEMS = [
   { label: 'Rédaction de documents', text: 'Élaboration de courriers administratifs, attestations ou contrats standards pour sécuriser vos échanges.' },
@@ -11,7 +12,7 @@ export default function Legal() {
     <section className="section pole" id="juridique">
       <div className="wrap">
         <div className="pole-grid">
-          <div className="pole-body">
+          <Reveal className="pole-body">
             <span className="eyebrow">Pôle Juridique</span>
             <h2>Sécurisez vos <span className="accent">démarches</span></h2>
             <p className="pole-intro">Bénéficiez d'une assistance structurée pour vos formalités et documents courants.</p>
@@ -23,9 +24,9 @@ export default function Legal() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="pole-visual visual-legal">
+          <Reveal delay={120} className="pole-visual visual-legal">
             <div className="doc-card">
               <div className="doc-line"></div>
               <div className="doc-line short"></div>
@@ -33,7 +34,7 @@ export default function Legal() {
               <div className="doc-line" style={{ width: '80%' }}></div>
               <div className="doc-stamp">Dossier à jour</div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

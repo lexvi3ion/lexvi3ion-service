@@ -1,4 +1,5 @@
 import { CheckIcon } from './icons.jsx'
+import Reveal from './Reveal.jsx'
 
 const ITEMS = [
   { label: 'Création de contenus', text: 'Conception de visuels attractifs et rédaction de textes percutants (copywriting) adaptés à votre cible.' },
@@ -11,7 +12,7 @@ export default function Marketing() {
     <section className="section pole" id="marketing">
       <div className="wrap">
         <div className="pole-grid reverse">
-          <div className="pole-visual visual-marketing">
+          <Reveal className="pole-visual visual-marketing">
             <div className="content-grid">
               <div className="content-tile"><span></span></div>
               <div className="content-tile hot"><span></span></div>
@@ -20,9 +21,9 @@ export default function Marketing() {
               <div className="content-tile"><span></span></div>
               <div className="content-tile"><span></span></div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="pole-body">
+          <Reveal delay={120} className="pole-body">
             <span className="eyebrow">Pôle Marketing</span>
             <h2>Visibilité <span className="accent">&amp; contenus</span></h2>
             <p className="pole-intro">Dynamisez votre image de marque et attirez de nouveaux clients grâce à une communication maîtrisée.</p>
@@ -34,7 +35,7 @@ export default function Marketing() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

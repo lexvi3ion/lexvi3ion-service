@@ -1,16 +1,15 @@
+import Reveal from './Reveal.jsx'
+
 export default function Approach() {
   return (
     <section className="section approach" id="approche">
       <div className="wrap">
         <div className="approach-grid">
-          <div className="approach-mark">
-            <span className="lex">LEX</span>
-            <span className="vi3ion">
-              VI<span className="three">3</span>ION
-            </span>
-          </div>
+          <Reveal>
+            <img src="/logo.png" alt="Logo LEX VI3ION" className="approach-mark-img" />
+          </Reveal>
 
-          <div>
+          <Reveal delay={120}>
             <span className="eyebrow">L'approche</span>
             <h2 style={{ marginTop: 14, color: '#fff' }}>
               Un copilote, pas un prestataire de plus
@@ -31,7 +30,7 @@ export default function Approach() {
                 pour faire grandir votre activité en toute confiance.
               </p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
