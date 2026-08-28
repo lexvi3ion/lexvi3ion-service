@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lexvi3ion.vercel.app/sitemap.xml
+Sitemap: https://lexvi3ion-service.vercel.app/sitemap.xml

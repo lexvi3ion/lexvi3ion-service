@@ -21,7 +21,7 @@ largement :
   vide, le bouton "Réserver un appel" ouvre le formulaire de contact à la
   place, donc rien n'est cassé en attendant.
 - **`index.html`, `public/robots.txt`, `public/sitemap.xml`** — remplacer
-  `lexvi3ion.vercel.app` par le vrai domaine une fois le déploiement
+  `lexvi3ion-service.vercel.app` par le vrai domaine une fois le déploiement
   confirmé (ou le nom de domaine personnalisé si vous en ajoutez un).
 
 ## Formulaire de contact
@@ -74,7 +74,7 @@ git push -u origin main
 3. Vercel détecte automatiquement Vite : laisse les réglages par défaut
    (`Build Command: npm run build`, `Output Directory: dist`).
 4. Clique sur **Deploy**. Le site sera en ligne en quelques secondes, avec
-   une URL du type `lexvi3ion.vercel.app`.
+   une URL du type `lexvi3ion-service.vercel.app`.
 5. Pour un nom de domaine perso, onglet **Settings → Domains** du projet
    Vercel.
 
