@@ -7,10 +7,6 @@ const LINKS = [
   { href: '/#domaines', label: 'Expertises' },
   { href: '/#simulateurs', label: 'Simulateurs' },
   { href: '/#process', label: 'Comment ça marche' },
-  { href: '/#finance', label: 'Finance' },
-  { href: '/#administratif', label: 'Administratif' },
-  { href: '/#juridique', label: 'Juridique' },
-  { href: '/#marketing', label: 'Marketing' },
   { href: '/#faq', label: 'FAQ' },
 ]
 
